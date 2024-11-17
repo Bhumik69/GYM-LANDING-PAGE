@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Your website description">
+    <meta name="keywords" content="your, website, keywords">
+    <title>Navigation Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="first-view" id="home">
+        <nav>
+            <div class="logo"></div>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a class="nav-item dark" href="#home">Home</a></li> 
+                <li><a class="nav-item dark" href="#about">About</a></li>
+                <li><a class="nav-item dark" href="#services">Services</a></li>
+                <li><a class="nav-item dark" href="#contact">Contact</a></li> 
+             </ul>
+            <ul class="nav-items">
+               <li><a class="nav-item dark hideOnMobile" href="#home">Home</a></li> 
+               <li><a class="nav-item dark hideOnMobile" href="#about">About</a></li>
+               <li><a class="nav-item dark hideOnMobile" href="#services">Services</a></li>
+               <li><a class="nav-item dark hideOnMobile" href="#contact">Contact</a></li> 
+               <li onclick=showSidebar() class="menu-button">
+                <a href="#" class="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>
+            </ul>
+        </nav>
+        <div id="motive">
+            <span>BE YOUR</span> <span id="best"> BEST</span>
+        </div>
+        <button class="action-button"><a href="#contact">JOIN NOW</a></button>
+    </div>
+    
+    <div class="second-view" id="about">
+        <div id="trainers">
+            <h2>ABOUT OUR TRAINERS</h2>
+            <div class="data">
+                <div id="trainer1" class="child">
+                    <h3>Trainer 1</h3>
+                    <img src="img/trainer1.png" alt="Trainer 1" loading="lazy">
+                    <p>Some information about Trainer 1.</p>
+                </div>
+                <div id="trainer2" class="child">
+                    <h3>Trainer 2</h3>
+                    <img src="img/trainer2.png" alt="Trainer 2" loading="lazy">
+                    <p>Some information about Trainer 2.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="third-view" id="services">
+        <h2>OUR SERVICES</h2>
+        <div class="servy">
+            <div class="box">
+                <img src="img/gym.jpg" alt="Tour our gym" loading="lazy">
+                <div class="overlay">Tour our gym</div>
+            </div>
+            <div class="box">
+                <img src="img/pt.jpg" alt="Personal Training" loading="lazy">
+                <div class="overlay">Personal Training</div>
+            </div>
+            <div class="box">
+                <img src="img/diet.jpg" alt="Diet Plan" loading="lazy">
+                <div class="overlay">Diet Plan</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fourth-view" id="contact">
+        <div class="text">
+            <h2>Get in Touch Today</h2>
+        </div>
+        <div class="contact-info">
+            <div class="address">
+                <h2 class="h2">ADDRESS</h2>
+                <p>1234 Elm Street, Springfield, IL 62704, USA</p>
+            </div>
+            <div class="email">
+                <h2 class="h2">EMAIL</h2>
+                <p>example.user@gmail.com</p>
+            </div>
+            <div class="number">
+                <h2 class="h2">NUMBER</h2>
+                <p>(555) 123-4567</p>
+            </div>
+        </div>
+    </div> <!-- Closing tag for fourth-view -->
+    <script src="script.js"></script>
+</body>
+</html>

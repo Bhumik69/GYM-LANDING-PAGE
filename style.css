@@ -1,0 +1,431 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    font-size: 16px; /* Set a default font size */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF; /* Default text color */
+    overflow-x: hidden;
+    background-color: #141414; /* Default background color */
+}
+
+/* Navigation styles */
+nav {
+    position: absolute; /* Change to absolute positioning */
+    top: 20px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 100%; /* Full width */
+    z-index: 10; /* Ensure nav is above the first view */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo styles */
+.logo {
+    background-image: url('img/logo2.png'); /* Path to the logo image */
+    background-size: contain; /* Maintain aspect ratio */
+    background-repeat: no-repeat; 
+    width: 150px; /* Original width */
+    height: 75px; /* Original height */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transform: scale(2.5);
+    margin-top: 32px;
+}
+
+/* Navigation items styles */
+.nav-item {
+    font-size: 18px; /* Font size for nav items */
+    text-decoration: none; /* Remove default underline */
+    margin-right: 20px;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Dark items */
+.nav-item.dark {
+    color: rgba(255, 255, 255, 0.8); /* Light gray with some transparency */
+    background-color: rgba(0, 0, 0, 0.268); /* Dark background */
+    padding: 10px 15px; /* Padding for dark items */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Underline effect */
+.nav-item::after {
+    content: ''; /* Create a pseudo-element for the underline */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Start from the center */
+    bottom: -5px; /* Position it below the text */
+    width: 0; /* Initial width */
+    height: 2px; /* Height of the underline */
+    background-color: rgba(195, 24, 24, 0.8); /* Underline color to match text color */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
+}
+
+/* Hover effect for navigation items */
+.nav-item:hover {
+    color: rgb(215, 16, 16); /* Dark color on hover for contrast */
+}
+
+.nav-item:hover::after {
+    width: 100%; /* Expand width to full on hover */
+    left: 0; /* Align to the left */
+}
+
+/* First view styles */
+.first-view {
+    background-image: url('img/background.png'); /* Replace with your photo path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+}
+
+/* Action button styles */
+.action-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #c8ff00; /* Button color */
+    color: rgb(0, 0, 0); /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    margin-top: 20px; /* Space above the button */
+}
+
+.action-button a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Protest Strike';
+    letter-spacing: 0.7px;
+}
+
+/* Other content styles */
+.other-content {
+    padding: 20px; /* Add padding */
+    background-color: #001F3F; /* Optional: background color for content */
+    color: white; /* Text color for other content */
+}
+
+#motive {
+    font-size: 40px;
+    font-family: 'Anton';
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+#best {
+    color: #c8ff00;
+}
+
+.second-view {
+    background-color: #141414;
+    padding: 20px;
+    color: white;
+}
+
+.second-view h2 {
+    font-size: 30px;
+    font-family: 'Protest Strike';
+    margin-bottom: 20px;
+}
+
+.second-view .data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.second-view .child {
+    background-color: #001F3F;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 300px;
+}
+
+.second-view .child img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    cursor:pointer;
+}
+
+.second-view .child h3 {
+    font-size: 20px;
+    font-family: 'Protest Strike';
+    margin-bottom: 10px;
+}
+
+.second-view .child p {
+    font-size: 16px;
+    font-family: 'Roboto Condensed';
+    margin-bottom: 20px;
+}
+
+.third-view {
+    background-color: #141414;
+    padding: 20px;
+    color: white;
+    color: #c8ff00;
+    font-style: italic;
+}
+
+.third-view h2 {
+    font-size: 30px;
+    font-family: 'Protest Strike';
+    margin-bottom: 20px;
+}
+
+.third-view .servy {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.third-view .box {
+    background-color: #001F3F;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+}
+
+.third-view .box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.third-view .box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    font-family: 'Protest Strike';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.third-view .box:hover .overlay {
+    opacity: 1;
+}
+
+.fourth-view {
+    background-color: #141414;
+    padding: 20px;
+    color: white;
+    background-image: url(img/background2.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fourth-view .text {
+    font-size: 36px;
+    font-family: 'Protest Strike';
+    position: relative;
+    margin-bottom: 9vw;
+    margin-top: 21vw;
+    margin-left: 4vw;
+    color: #c8ff00;
+    font-style: italic;
+}
+
+.fourth-view .contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fourth-view .address, .fourth-view .email, .fourth-view .number {
+    background-color: #001F3F;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 300px;
+}
+
+.fourth-view .address h2, .fourth-view .email h2, .fourth-view .number h2 {
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: 'Protest Strike';
+    margin-bottom: 10px;
+}
+
+.fourth-view .address p, .fourth-view .email p, .fourth-view .number p {
+    font-size: 16px;
+    font-family: 'Roboto Condensed';
+    margin-bottom: 20px;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Sidebar styles */
+.sidebar {
+    display: none; /* Keep it hidden by default */
+    position: fixed;
+    top: -7vw;
+    left: 68vw;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Added transform transition */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 41px; /* Space between each item */
+    padding-left: 12px;
+    padding-top: 13vw;
+}
+
+/* Add a class to show the sidebar */
+.sidebar.show {
+    display: flex; /* Change to flex when shown */
+    transform: translateX(0); /* Reset transform */
+    opacity: 1; /* Fully visible */
+}
+
+/* Add a class to hide the sidebar */
+.sidebar.hide {
+    transform: translateX(100%); /* Move out of view */
+    opacity: 0; /* Fully transparent */
+}
+
+.menu-button{
+    display: none;
+}
+
+@media (max-width : 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+        padding-right: 2vw;
+    }
+}
+
+@media  (max-width : 400px){
+    .sidebar {
+        left: 50vw;
+        padding: 20px; /* Add padding to items in sidebar */
+    }
+}
+
+/* General styles for smaller devices */
+@media (max-width: 1200px) {
+    .logo {
+        width: 120px; /* Reduce logo size */
+        height: 60px; /* Reduce logo height */
+    }
+
+    .nav-item {
+        font-size: 16px; /* Smaller font size for nav items */
+    }
+
+    .action-button {
+        font-size: 14px; /* Smaller button font size */
+    }
+}
+
+/* Styles for tablets */
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .sidebar {
+        left: 0; /* Adjust sidebar position */
+        width: 80%; /* Make sidebar narrower */
+    }
+
+    .first-view {
+        padding: 20px; /* Add padding for smaller screens */
+    }
+
+    .second-view .data {
+        flex-direction: column; /* Stack child elements vertically */
+        align-items: center; /* Center items */
+    }
+
+    .third-view .servy {
+        flex-direction: column; /* Stack service items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .fourth-view .contact-info {
+        flex-direction: column; /* Stack contact items vertically */
+    }
+
+    .fourth-view .address, .fourth-view .email, .fourth-view .number {
+        width: 90%; /* Make contact items wider on small screens */
+        margin: 10px 0; /* Adjust margins */
+    }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 400px) {
+    .nav-item {
+        font-size: 14px; /* Further reduce font size */
+    }
+
+    .action-button {
+        padding: 8px 16px; /* Adjust button padding */
+    }
+
+    #motive {
+        font-size: 24px; /* Smaller font size for motive text */
+    }
+
+    .second-view .child {
+        width: 90%; /* Make child elements full width */
+        margin: 10px 0; /* Adjust margins */
+    }
+
+    .third-view .box {
+        width: 90%; /* Make boxes full width */
+        margin: 10px 0; /* Adjust margins */
+    }
+
+    .fourth-view .address, .fourth-view .email, .fourth-view .number {
+        width: 90%; /* Make contact items full width */
+        margin: 10px 0; /* Adjust margins */
+    }
+}
